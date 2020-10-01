@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.txtMiddlename = new System.Windows.Forms.TextBox();
+            this.txtFirstname = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtFirstname = new System.Windows.Forms.TextBox();
-            this.txtMiddlename = new System.Windows.Forms.TextBox();
-            this.txtLastname = new System.Windows.Forms.TextBox();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,23 +64,71 @@
             this.panel1.Size = new System.Drawing.Size(373, 329);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btnClear
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Middlename:";
+            this.btnClear.Location = new System.Drawing.Point(248, 273);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(94, 36);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "&Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label2
+            // btnSave
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Firstname: ";
+            this.btnSave.Location = new System.Drawing.Point(144, 273);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 36);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "&Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(144, 167);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(198, 90);
+            this.txtAddress.TabIndex = 9;
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(144, 134);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(67, 26);
+            this.txtAge.TabIndex = 8;
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.Location = new System.Drawing.Point(144, 76);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(198, 26);
+            this.txtLastname.TabIndex = 7;
+            // 
+            // txtMiddlename
+            // 
+            this.txtMiddlename.Location = new System.Drawing.Point(144, 44);
+            this.txtMiddlename.Name = "txtMiddlename";
+            this.txtMiddlename.Size = new System.Drawing.Size(198, 26);
+            this.txtMiddlename.TabIndex = 6;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.Location = new System.Drawing.Point(144, 12);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(198, 26);
+            this.txtFirstname.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Address:";
             // 
             // label3
             // 
@@ -100,71 +148,23 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Age:";
             // 
-            // label5
+            // label2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Address:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Firstname: ";
             // 
-            // txtFirstname
+            // label1
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(144, 12);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(198, 26);
-            this.txtFirstname.TabIndex = 5;
-            // 
-            // txtMiddlename
-            // 
-            this.txtMiddlename.Location = new System.Drawing.Point(144, 44);
-            this.txtMiddlename.Name = "txtMiddlename";
-            this.txtMiddlename.Size = new System.Drawing.Size(198, 26);
-            this.txtMiddlename.TabIndex = 6;
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.Location = new System.Drawing.Point(144, 76);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(198, 26);
-            this.txtLastname.TabIndex = 7;
-            // 
-            // txtAge
-            // 
-            this.txtAge.Location = new System.Drawing.Point(144, 134);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(67, 26);
-            this.txtAge.TabIndex = 8;
-            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(144, 167);
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(198, 90);
-            this.txtAddress.TabIndex = 9;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(144, 273);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 36);
-            this.btnSave.TabIndex = 10;
-            this.btnSave.Text = "&Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(248, 273);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(94, 36);
-            this.btnClear.TabIndex = 11;
-            this.btnClear.Text = "&Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Middlename:";
             // 
             // Form1
             // 

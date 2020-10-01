@@ -55,6 +55,7 @@
     <Compile Include="InputNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestClient.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="StudentInfo.cs">
       <SubType>Form</SubType>
