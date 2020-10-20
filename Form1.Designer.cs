@@ -98,7 +98,9 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(67, 26);
             this.txtAge.TabIndex = 8;
+            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
             this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
+            this.txtAge.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAge_KeyUp);
             // 
             // txtLastname
             // 

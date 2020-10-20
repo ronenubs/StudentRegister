@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,13 +28,20 @@ namespace StudentRegister
 
         private void StudentInfo_Load(object sender, EventArgs e)
         {
-            lblFullname.Text =
-                student.Firstname + " " +
-                student.Middlename + " " +
-                student.Lastname;
-
-            lblAge.Text = student.Age.ToString();
-            lblAddress.Text = student.Address;
+            string result = MyRestClient.GetAllStudents();
+            MessageBox.Show(result);
+            List<Student> student = JsonConvert.DeserializeObject<List<Student>>(result);
+            foreach (var s in student)
+            {
+                dgStudents.Rows.Add(
+                    s.StudentID,
+                    s.Firstname,
+                    s.Middlename,
+                    s.Lastname,
+                    s.Age,
+                    s.Address
+                    );
+            }
         }
     }
 }

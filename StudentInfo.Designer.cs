@@ -29,49 +29,70 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblFullname = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
+            this.dgStudents = new System.Windows.Forms.DataGridView();
+            this.colStudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFirstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMiddlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblAddress);
-            this.panel1.Controls.Add(this.lblAge);
-            this.panel1.Controls.Add(this.lblFullname);
+            this.panel1.Controls.Add(this.dgStudents);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(26, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 403);
             this.panel1.TabIndex = 0;
             // 
-            // lblFullname
+            // dgStudents
             // 
-            this.lblFullname.AutoSize = true;
-            this.lblFullname.Location = new System.Drawing.Point(20, 19);
-            this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(60, 24);
-            this.lblFullname.TabIndex = 0;
-            this.lblFullname.Text = "label1";
+            this.dgStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colStudentID,
+            this.colFirstname,
+            this.colMiddlename,
+            this.colLastname,
+            this.colAge,
+            this.colAddress});
+            this.dgStudents.Location = new System.Drawing.Point(3, 3);
+            this.dgStudents.Name = "dgStudents";
+            this.dgStudents.Size = new System.Drawing.Size(442, 150);
+            this.dgStudents.TabIndex = 0;
             // 
-            // lblAge
+            // colStudentID
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(24, 65);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(60, 24);
-            this.lblAge.TabIndex = 1;
-            this.lblAge.Text = "label1";
+            this.colStudentID.HeaderText = "ID";
+            this.colStudentID.Name = "colStudentID";
             // 
-            // lblAddress
+            // colFirstname
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(28, 115);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(60, 24);
-            this.lblAddress.TabIndex = 2;
-            this.lblAddress.Text = "label1";
+            this.colFirstname.HeaderText = "Firstname";
+            this.colFirstname.Name = "colFirstname";
+            // 
+            // colMiddlename
+            // 
+            this.colMiddlename.HeaderText = "Middlename";
+            this.colMiddlename.Name = "colMiddlename";
+            // 
+            // colLastname
+            // 
+            this.colLastname.HeaderText = "Lastname";
+            this.colLastname.Name = "colLastname";
+            // 
+            // colAge
+            // 
+            this.colAge.HeaderText = "Age";
+            this.colAge.Name = "colAge";
+            // 
+            // colAddress
+            // 
+            this.colAddress.HeaderText = "Address";
+            this.colAddress.Name = "colAddress";
             // 
             // StudentInfo
             // 
@@ -83,7 +104,7 @@
             this.Text = "StudentInfo";
             this.Load += new System.EventHandler(this.StudentInfo_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStudents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -91,8 +112,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.Label lblFullname;
+        private System.Windows.Forms.DataGridView dgStudents;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStudentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFirstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMiddlename;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
     }
 }

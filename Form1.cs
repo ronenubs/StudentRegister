@@ -24,16 +24,8 @@ namespace StudentRegister
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Student student = new Student(
-                txtFirstname.Text,
-                txtMiddlename.Text,
-                txtLastname.Text,
-                Convert.ToInt32(txtAge.Text),
-                txtAddress.Text
-                );
-
-            StudentInfo studentInfo = new StudentInfo(student);
-            studentInfo.Show();
+            StudentInfo info = new StudentInfo();
+            info.Show();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -49,6 +41,16 @@ namespace StudentRegister
             txtAge.ResetText();
             txtAddress.ResetText();
             txtFirstname.Focus();
+        }
+
+        private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAge_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
