@@ -36,12 +36,14 @@
             this.colLastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.dgStudents);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(26, 13);
@@ -60,7 +62,9 @@
             this.colAge,
             this.colAddress});
             this.dgStudents.Location = new System.Drawing.Point(3, 3);
+            this.dgStudents.MultiSelect = false;
             this.dgStudents.Name = "dgStudents";
+            this.dgStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgStudents.Size = new System.Drawing.Size(442, 150);
             this.dgStudents.TabIndex = 0;
             // 
@@ -94,6 +98,16 @@
             this.colAddress.HeaderText = "Address";
             this.colAddress.Name = "colAddress";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(72, 199);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(174, 77);
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "&Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,5 +133,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAge;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

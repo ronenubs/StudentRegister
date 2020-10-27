@@ -24,16 +24,20 @@ namespace StudentRegister
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-            MyRestClient.InsertStudent(
-                new Student(
+            Student s = new Student(
                     -1,
                     txtFirstname.Text,
                     txtMiddlename.Text,
                     txtLastname.Text,
                     Convert.ToInt32(txtAge.Text),
                     txtAddress.Text
-                )));
+                );
+            string response = MyRestClient.InsertStudent(s);
+
+            if(response.Equals("success"))
+            {
+                MessageBox.Show("Student is sucessfully added.");
+            }
            
             StudentInfo info = new StudentInfo();
             info.Show();

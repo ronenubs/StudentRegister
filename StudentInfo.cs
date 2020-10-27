@@ -28,8 +28,13 @@ namespace StudentRegister
 
         private void StudentInfo_Load(object sender, EventArgs e)
         {
+            LoadStudents();
+        }
+
+        private void LoadStudents()
+        {
             string result = MyRestClient.GetAllStudents();
-            MessageBox.Show(result);
+            //MessageBox.Show(result);
             List<Student> student = JsonConvert.DeserializeObject<List<Student>>(result);
             foreach (var s in student)
             {
@@ -42,6 +47,13 @@ namespace StudentRegister
                     s.Address
                     );
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            MyRestClient.DeleteStudent(Convert.ToInt32(dgStudents.CurrentRow.Cells[0].Value));
+            dgStudents.Rows.Clear();
+            LoadStudents();
         }
     }
 }
